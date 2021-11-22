@@ -1,8 +1,9 @@
 import React from "react";
 import { Redirect, Route, Switch, useLocation } from "react-router-dom";
-import NotFound from "../containers/NotFound";
+import { PackageInfo, NotFound } from "../containers";
+import { PackageState } from "../contexts";
 
-const Router = () => {
+const Root = () => {
   const location = useLocation();
 
   return (
@@ -17,6 +18,11 @@ const Router = () => {
       >
         <Redirect to={`${location.pathname.toLowerCase()}`} />
       </Route>
+      <Route path="/:platform/:name">
+        <PackageState>
+          <PackageInfo />
+        </PackageState>
+      </Route>
       <Route path="*">
         <NotFound />
       </Route>
@@ -24,4 +30,4 @@ const Router = () => {
   );
 };
 
-export default Router;
+export default Root;

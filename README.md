@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+# Notes about this project:
+
+- I'm not bothering to do any styling whatsoever on this project. While I could half-ass some design, my personal philosophy is that if you are in a position where you must create technical debt, it is always better to make that debt as obvious as possible, so no one accidentally wastes time extending it.
+- If you'd like examples of better design, you can [check out my repo of some past projects](https://github.com/toakleaf)
+
+# Setup:
+
+1. Clone the repo
+2. Make a copy of `/.env.example` just named `/.env`
+3. Add your key from [libraries.io](https://libraries.io) to the env var in the `/.env` file you just created
+
+# Getting Started with Create React App (auto-generated boilerplate)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
